@@ -13,13 +13,10 @@ if __name__ == "__main__":
     btn = button.Button(17)
     player = player.Player()
     
-    time.sleep(3)
-    
     main_loop = True
     while main_loop:
-      # print("Waiting for button press")
       print(f"Button state is {btn.state}")
-      time.sleep(2)
+      time.sleep(1)
       
       # Player ei vielä ole päälle ja painetaan ekaa kertaa = player päälle
       if not player.state and btn.state:

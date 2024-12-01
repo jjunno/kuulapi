@@ -11,12 +11,10 @@ class Player:
     print("Playing audio file")
     self.state = True
     pygame.mixer.music.play()
-    print("Audio file played")
     return True
   
   def stop(self):
     print("Stopping audio file")
     self.state = False
     pygame.mixer.music.stop()
-    print("Audio file stopped")
     return True
