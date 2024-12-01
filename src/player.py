@@ -18,3 +18,9 @@ class Player:
     self.state = False
     pygame.mixer.music.stop()
     return True
+
+  def is_playing(self):
+    busy = pygame.mixer.music.get_busy()
+    self.state = busy
+    print(f"Player is busy: {busy}")
+    return busy
