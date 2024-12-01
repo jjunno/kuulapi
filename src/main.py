@@ -21,7 +21,9 @@ if __name__ == "__main__":
       
       if btn.state:
         player.play()
+      else:
         main_loop = False
+      
     player.stop()
     led_red.off()
     print("Exiting main loop")
