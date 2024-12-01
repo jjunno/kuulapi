@@ -34,7 +34,7 @@ if __name__ == "__main__":
       
       # Player is busy, continue
       if player.is_playing():
-        prnt("The player is busy")
+        print("The player is busy")
         continue
       
       # Button has been pressed but player is not busy, the song has ended
