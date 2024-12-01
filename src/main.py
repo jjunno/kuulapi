@@ -29,6 +29,7 @@ if __name__ == "__main__":
       # Player is on and button is pressed again
       if player.state and not btn.state:
         led_green.off()
+        player.stop()
         # main_loop = False
         
     player.stop()
