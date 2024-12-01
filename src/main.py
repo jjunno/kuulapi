@@ -19,11 +19,11 @@ if __name__ == "__main__":
       print(f"Button state is {btn.state}")
       time.sleep(2)
       
-      if not player.state and btn.state:
-        player.play()
-      else:
+      if player.state:
         player.stop()
         main_loop = False
+      else:
+        player.play()
       
     player.stop()
     led_red.off()
