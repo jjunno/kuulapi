@@ -1,10 +1,13 @@
+import os
 import player
 import led
 import button
 import time
 
 if __name__ == "__main__":
-  # First thing is to turn on red LED to indicate that the system is booting up
+    os.chdir("/home/pi/kuulapi")
+  
+    # First thing is to turn on red LED to indicate that the system is booting up
     led_red = led.Led(23, "red")
     led_red.on()
     
