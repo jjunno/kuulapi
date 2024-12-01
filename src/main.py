@@ -11,7 +11,7 @@ if __name__ == "__main__":
     btn = button.Button(17)
     player = player.Player()
     
-    time.sleep(10)
+    time.sleep(3)
     
     main_loop = True
     while main_loop:

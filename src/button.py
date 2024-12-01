@@ -15,7 +15,7 @@ class Button:
     GPIO.add_event_detect(self.gpio, GPIO.RISING, callback=self.onPress, bouncetime=200)
 
     
-  def onPress(self):
+  def onPress(self, channel):
     print(f"Button {self.gpio} pressed")
     # Toggle state
     self.state = not self.state
