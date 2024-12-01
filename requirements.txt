@@ -1,3 +1,4 @@
 pygame
 playsound
 gpiozero
+RPi.GPIO
