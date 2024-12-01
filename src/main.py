@@ -20,12 +20,8 @@ if __name__ == "__main__":
       time.sleep(2)
       
       if btn.state:
-        led_red.off()
+        player.play()
         main_loop = False
+    player.stop()
+    led_red.off()
     print("Exiting main loop")
-      
-    # led_red.off()
-    
-    # player.play()
-    # time.sleep(10)
-    # player.stop()
