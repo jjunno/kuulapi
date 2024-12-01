@@ -12,7 +12,7 @@ class Button:
     GPIO.setup(self.gpio, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
     
     # Listen to events on GPIO PIN
-    GPIO.add_event_detect(self.gpio, GPIO.RISING, callback=self.onPressm, bouncetime=200)
+    GPIO.add_event_detect(self.gpio, GPIO.RISING, callback=self.onPress, bouncetime=200)
 
     
   def onPress(self):
