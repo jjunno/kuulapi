@@ -8,6 +8,8 @@ if __name__ == "__main__":
     led_red = led.Led(23, "red")
     led_red.on()
     
+    led_green = led.Led(26, "green")
+    
     btn = button.Button(17)
     player = player.Player()
     
@@ -21,10 +23,12 @@ if __name__ == "__main__":
       
       # Player ei vielä ole päälle ja painetaan ekaa kertaa = player päälle
       if not player.state and btn.state:
+        led_green.on()
         player.play()
         
       # Player is on and button is pressed again
       if player.state and not btn.state:
+        led_green.off()
         main_loop = False
         
     player.stop()
