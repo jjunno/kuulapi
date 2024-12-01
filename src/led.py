@@ -1,9 +1,9 @@
 from gpiozero import LED
 
 class Led:
-  def __init__(self, color):
+  def __init__(self, gpio, color):
     self.color = color
-    self.gpio = 23
+    self.gpio = int(gpio)
     self.led = LED(self.gpio)
     self.state = False
     
