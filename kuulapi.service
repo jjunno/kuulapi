@@ -1,0 +1,15 @@
+[Unit]
+Description=Run kuulapi main.py at startup
+After=network.target
+
+[Service]
+ExecStart=/home/pi/kuulapi/venv/bin/python3 /home/pi/kuulapi/src/main.py
+WorkingDirectory=/home/pi/kuulapi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+Environment="PATH=/home/pi/kuulapi/venv/bin"
+
+[Install]
+WantedBy=multi-user.target
