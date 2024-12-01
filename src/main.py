@@ -15,16 +15,18 @@ if __name__ == "__main__":
     
     main_loop = True
     while main_loop:
-      print("Waiting for button press")
+      # print("Waiting for button press")
       print(f"Button state is {btn.state}")
       time.sleep(2)
       
-      if player.state:
-        player.stop()
-        main_loop = False
-      else:
+      # Player ei vielä ole päälle ja painetaan ekaa kertaa = player päälle
+      if not player.state and btn.state:
         player.play()
-      
+        
+      # Player is on and button is pressed again
+      if player.state and not btn.state:
+        main_loop = False
+        
     player.stop()
     led_red.off()
     print("Exiting main loop")
