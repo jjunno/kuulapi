@@ -22,20 +22,24 @@ if __name__ == "__main__":
       
       # Player is off and button is pressed
       if not player.is_playing() and btn.state:
+        print("Player is off, button is pressed")
         led_green.on()
         player.play()
         
       # Player is on and button is pressed again
       if player.is_playing() and not btn.state:
+        print("Player is on, button has been pressed")
         led_green.off()
         player.stop()
       
       # Player is busy, continue
       if player.is_playing():
+        prnt("The player is busy")
         continue
       
       # Button has been pressed but player is not busy, the song has ended
       if btn.state:
+        print("Button has been pressed, player is not busy, the song has ended")
         led_green.off()
         
     player.stop()
